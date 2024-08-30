@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">Adivina el Número</h1>
+        <div id="welcomeMessage" class="slide-in">
+            <p>¡Bienvenido al juego de Adivinar el Número!</p>
+            <p>Estoy pensando en un número entre 1 y 100. Tienes que adivinar cuál es en el menor número de intentos posible. ¡Buena suerte!</p>
+        </div>
+        <div class="game fade-in">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Ingresa tu número">
+            <button id="guessButton">Adivinar</button>
+            <p id="resultMessage"></p>
+        </div>
+        <div class="attempts fade-in">
+            <p>Intentos: <span id="attemptCount">0</span></p>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+        <div class="score-timer fade-in">
+            <p>Puntuación: <span id="score">100</span></p>
+            <p>Tiempo restante: <span id="timer">60</span> segundos</p>
+        </div>
+        <button id="restartButton" class="hidden fade-in">Reiniciar Juego</button>
+        <div id="finalMessage" class="hidden fade-in">
+            <p>¡Juego terminado! Gracias por jugar. ¿Quieres compartir tu puntuación?</p>
+            <button id="shareButton">Compartir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
